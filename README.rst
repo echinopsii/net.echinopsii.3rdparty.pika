@@ -20,10 +20,17 @@ to stay fairly independent of the underlying network support library.
   python application. Pika tries to stay compatible with all of these, and to
   make adapting it to a new environment as simple as possible.
 
+This is a Pika fork allowing you to tune the pika client properties. 
+Waiting pull request (https://github.com/pika/pika/pull/571) to be merged or 
+getting similar functionality on pika master before removing this fork.
+
+
 Documentation
 -------------
 
 Pika's documentation is now at https://pika.readthedocs.org
+
+To use this fork extension you just need to import epika instead of pika.
 
 Example
 -------
@@ -31,7 +38,7 @@ Here is the most simple example of use, sending a message with the BlockingConne
 
 .. code :: python 
 
-    import pika
+    import epika as pika
     connection = pika.BlockingConnection()
     channel = connection.channel()
     channel.basic_publish(exchange='example',
@@ -43,7 +50,7 @@ And an example of writing a blocking consumer:
 
 .. code :: python 
 
-    import pika
+    import epika as pika
     connection = pika.BlockingConnection()
     channel = connection.channel()
 
@@ -61,6 +68,21 @@ And an example of writing a blocking consumer:
     requeued_messages = channel.cancel()
     print 'Requeued %i messages' % requeued_messages
     connection.close()
+
+And an example of tuning your client properties through Pika
+
+.. code :: python
+    import epika as pika
+    client_properties = {
+        'product': 'my product',
+        'information': 'my information',
+        'my_other_props': 'my other property'
+    }
+
+    credentials = pika.PlainCredentials('guest', 'guest')
+    parameters = pika.ConnectionParameters("localhost", 5672, '/',
+                                           credentials=credentials, client_props=client_properties)
+    connection = pika.BlockingConnection(parameters)
 
 Pika provides the following adapters
 ------------------------------------
