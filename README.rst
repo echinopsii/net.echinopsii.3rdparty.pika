@@ -72,6 +72,7 @@ And an example of writing a blocking consumer:
 And an example of tuning your client properties through Pika
 
 .. code :: python
+
     import epika as pika
     client_properties = {
         'product': 'my product',
