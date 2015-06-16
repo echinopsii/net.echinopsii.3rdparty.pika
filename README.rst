@@ -30,7 +30,6 @@ Documentation
 
 Pika's documentation is now at https://pika.readthedocs.org
 
-To use this fork extension you just need to import epika instead of pika.
 
 Example
 -------
@@ -41,8 +40,8 @@ Here is the most simple example of use, sending a message with the BlockingConne
 
 .. code :: python 
 
-    import epika
-    connection = epika.BlockingConnection()
+    import pika
+    connection = pika.BlockingConnection()
     channel = connection.channel()
     channel.basic_publish(exchange='example',
                           routing_key='test',
@@ -53,8 +52,8 @@ And an example of writing a blocking consumer:
 
 .. code :: python 
 
-    import epika
-    connection = epika.BlockingConnection()
+    import pika
+    connection = pika.BlockingConnection()
     channel = connection.channel()
 
     for method_frame, properties, body in channel.consume('test'):
@@ -76,17 +75,17 @@ And an example of tuning your client properties through Pika
 
 .. code :: python
 
-     import epika
+     import pika
      client_properties = {
         'product': 'my product',
         'information': 'my information',
         'my_other_props': 'my other property'
      }
 
-    credentials = epika.PlainCredentials('guest', 'guest')
-    parameters = epika.ConnectionParameters("localhost", 5672, '/',
+    credentials = pika.PlainCredentials('guest', 'guest')
+    parameters = pika.ConnectionParameters("localhost", 5672, '/',
                                            credentials=credentials, client_props=client_properties)
-    connection = epika.BlockingConnection(parameters)
+    connection = pika.BlockingConnection(parameters)
 
 
 Pika provides the following adapters
