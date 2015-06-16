@@ -12,22 +12,25 @@ requirements = list()
 if on_rtd:
     requirements.append('tornado')
 
-long_description = ('Pika is a pure-Python implementation of the AMQP 0-9-1 '
+long_description = ('This is a forked version of Pika which help you tune '
+                    'the client properties. This package is using python3-pika '
+                    'Pika is a pure-Python implementation of the AMQP 0-9-1 '
                     'protocol that tries to stay fairly independent of the '
                     'underlying network support  library. Pika was developed '
                     'primarily for use with RabbitMQ, but should also work '
                     'with other AMQP 0-9-1 brokers.')
 
-setup(name='pika',
+setup(name='python3-epika',
       version='0.9.14',
-      description='Pika Python AMQP Client Library',
+      description='echinopsii Pika Python AMQP Client Library',
       long_description=long_description,
       author='Tony Garnock-Jones',
       author_email='tonygarnockjones@gmail.com',
-      maintainer='Gavin M. Roy',
-      maintainer_email='gavinmroy@gmail.com',
-      url='https://pika.readthedocs.org ',
-      packages=['pika', 'pika.adapters'],
+      maintainer='Mathilde Ffrench',
+      maintainer_email='mathilde.ffrench@echinopsii.net',
+      url='https://github.com/echinopsii/net.echinopsii.3rdparty.pika',
+      download_url='https://github.com/echinopsii/net.echinopsii.3rdparty.pika/tarball/e-p3-0.9.14',
+      packages=['epika', 'epika.adapters'],
       license='MPL v2.0',
       install_requires=requirements,
       package_data={'': ['LICENSE', 'README.md']},
