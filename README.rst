@@ -30,7 +30,6 @@ Documentation
 
 Pika's documentation is now at https://pika.readthedocs.org
 
-To use this fork extension you just need to import epika instead of pika.
 
 Example
 -------
@@ -38,7 +37,7 @@ Here is the most simple example of use, sending a message with the BlockingConne
 
 .. code :: python 
 
-    import epika as pika
+    import pika
     connection = pika.BlockingConnection()
     channel = connection.channel()
     channel.basic_publish(exchange='example',
@@ -50,7 +49,7 @@ And an example of writing a blocking consumer:
 
 .. code :: python 
 
-    import epika as pika
+    import pika
     connection = pika.BlockingConnection()
     channel = connection.channel()
 
@@ -73,7 +72,7 @@ And an example of tuning your client properties through Pika
 
 .. code :: python
 
-    import epika as pika
+    import pika
     client_properties = {
         'product': 'my product',
         'information': 'my information',
