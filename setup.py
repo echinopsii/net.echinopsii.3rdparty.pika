@@ -22,14 +22,14 @@ long_description = ('This is a forked version of Pika which help you tune '
                     'primarily for use with RabbitMQ, but should also work '
                     'with other AMQP 0-9-1 brokers.')
 
-setup(name='pika',
-      version='0.9.14.tuclip',
-      description='Pika Python AMQP Client Library',
+setup(name='epika',
+      version='0.9.14',
+      description='echinopsii Pika Python AMQP Client Library',
       long_description=long_description,
       maintainer='Mathilde Ffrench',
       maintainer_email='mathilde.ffrench@echinopsii.net',
       url='https://github.com/echinopsii/net.echinopsii.3rdparty.pika',
-      download_url='https://github.com/echinopsii/net.echinopsii.3rdparty.pika/tarball/0.9.14.tuclip',
+      download_url='https://github.com/echinopsii/net.echinopsii.3rdparty.pika/tarball/e-0.9.14',
       packages=['pika', 'pika.adapters'],
       license='MPL v2.0',
       install_requires=requirements,
