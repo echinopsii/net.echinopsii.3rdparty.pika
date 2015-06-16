@@ -20,6 +20,11 @@ to stay fairly independent of the underlying network support library.
   python application. Pika tries to stay compatible with all of these, and to
   make adapting it to a new environment as simple as possible.
 
+This is a Pika fork allowing you to tune the pika client properties. 
+Waiting pull request (https://github.com/pika/pika/pull/571) to be merged or
+getting similar functionality on pika master before removing this fork.
+
+
 Documentation
 -------------
 
@@ -61,6 +66,23 @@ And an example of writing a blocking consumer:
     requeued_messages = channel.cancel()
     print 'Requeued %i messages' % requeued_messages
     connection.close()
+
+And an example of tuning your client properties through Pika
+
+.. code :: python
+
+     import pika
+     client_properties = {
+        'product': 'my product',
+        'information': 'my information',
+        'my_other_props': 'my other property'
+     }
+
+    credentials = pika.PlainCredentials('guest', 'guest')
+    parameters = pika.ConnectionParameters("localhost", 5672, '/',
+                                           credentials=credentials, client_props=client_properties)
+    connection = pika.BlockingConnection(parameters)
+
 
 Pika provides the following adapters
 ------------------------------------
