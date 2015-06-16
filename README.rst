@@ -30,6 +30,11 @@ Documentation
 
 Pika's documentation is now at https://pika.readthedocs.org
 
+Install
+-------
+
+``sudo pip3 install epika-python3``
+
 
 Example
 -------
