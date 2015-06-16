@@ -6,8 +6,7 @@
 .DS_Store
 pika.iml
 codegen
-epika.egg-info
-pika.egg-info
+epika_python2.egg-info
 examples/pika
 examples/blocking/pika
 atlassian*xml
