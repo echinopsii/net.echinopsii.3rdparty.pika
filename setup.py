@@ -14,19 +14,22 @@ if on_rtd:
     requirements.append('twisted')
     requirements.append('pyev')
 
-long_description = ('Pika is a pure-Python implementation of the AMQP 0-9-1 '
+long_description = ('This is a forked version of Pika which help you tune '
+                    'the client properties.'
+                    'Pika is a pure-Python implementation of the AMQP 0-9-1 '
                     'protocol that tries to stay fairly independent of the '
                     'underlying network support  library. Pika was developed '
                     'primarily for use with RabbitMQ, but should also work '
                     'with other AMQP 0-9-1 brokers.')
 
 setup(name='pika',
-      version='0.9.14',
+      version='0.9.14-tuclip',
       description='Pika Python AMQP Client Library',
       long_description=long_description,
-      maintainer='Gavin M. Roy',
-      maintainer_email='gavinmroy@gmail.com',
-      url='https://pika.readthedocs.org ',
+      maintainer='Mathilde Ffrench',
+      maintainer_email='mathilde.ffrench@echinopsii.net',
+      url='https://github.com/echinopsii/net.echinopsii.3rdparty.pika',
+      download_url='https://github.com/echinopsii/net.echinopsii.3rdparty.pika/tarball/0.9.14-tuclip',
       packages=['pika', 'pika.adapters'],
       license='MPL v2.0',
       install_requires=requirements,
