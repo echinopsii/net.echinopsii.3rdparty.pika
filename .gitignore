@@ -7,6 +7,7 @@
 .DS_Store
 pika.iml
 codegen
+epika.egg-info
 pika.egg-info
 examples/pika
 examples/blocking/pika
