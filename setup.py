@@ -13,14 +13,14 @@ if on_rtd:
     requirements.append('tornado')
 
 long_description = ('This is a forked version of Pika which help you tune '
-                    'the client properties. This package is using python3-pika '
+                    'the client properties. '
                     'Pika is a pure-Python implementation of the AMQP 0-9-1 '
                     'protocol that tries to stay fairly independent of the '
                     'underlying network support  library. Pika was developed '
                     'primarily for use with RabbitMQ, but should also work '
                     'with other AMQP 0-9-1 brokers.')
 
-setup(name='python3-epika',
+setup(name='epika-python3',
       version='0.9.14',
       description='echinopsii Pika Python AMQP Client Library',
       long_description=long_description,
