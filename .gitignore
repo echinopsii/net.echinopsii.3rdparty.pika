@@ -7,7 +7,7 @@
 .DS_Store
 pika.iml
 codegen
-python3_epika.egg-info
+epika_python3.egg-info
 pika.egg-info
 examples/pika
 examples/blocking/pika
